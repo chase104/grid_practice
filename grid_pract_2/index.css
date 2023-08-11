@@ -1,0 +1,48 @@
+body * {
+    box-sizing: border-box;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr; 
+    border: 1px dotted black;
+    /* 7 portions of space */
+    /* 2+3+2 = 7 */
+    /* 1st column gets 2/7 of the space */
+    /* 2nd column gets 3/7 of the space */
+    /* 3rd column gets 2/7 of the space */
+    grid-template-rows: 50px 30px 1fr 1fr 1fr;
+    background-color: bisque;
+    gap: 8px;
+}
+/* first child of grid, give a border */
+
+#grid-container>*{
+    border: 3px solid black;
+}
+
+#grid-container h1 {
+    grid-column: span 3;
+    text-align: center;
+    margin: 0px;
+}
+#grid-container img {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#grid-container ol {
+    grid-column: span 2;
+}
+#home{
+    grid-column: 1/2;
+}
+
+#facts-button{
+    grid-column: 3/4;
+}
+
+#moose-info{
+    /* we want this div to be 2 columns wide - we can write "span 2" or "2/4" */
+    grid-column: span 2
+}
