@@ -1,0 +1,36 @@
+h1{
+    letter-spacing: 10px;
+}
+
+#grid-parent{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 50px 1fr 30px;
+    height: 100vh;
+    margin: 0;
+    font-family: Helvetica;
+}
+
+aside {
+    background-color: #a2b4da;
+  }
+  
+  main {
+    background-color: #f3dba8;
+  }
+  
+  footer, nav {
+    background-color: #a2cbb6;
+  }
+nav {
+    grid-column: 1 / 3;
+}
+footer {
+    grid-column: span 2;
+}
+
+  .flex-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
